@@ -16,7 +16,9 @@ class Bot extends MovableObject {
         this.animate(); 
     }
     animate() {
-        this.moveLeft(); 
+        setInterval(() => {
+            this.moveLeft();
+        }, 1000 / 60);
         setInterval(() => {
             let i = this.currentImage % this.IMAGES_CHICKEN.length;
             let path = this.IMAGES_CHICKEN[i];
